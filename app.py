@@ -1,9 +1,9 @@
 from flask import Flask, jsonify
-from server.config import Config
-from server.extensions import jwt, bcrypt, mongo, cors
-from server.routes.auth_routes import auth_bp
-from server.routes.admin_routes import admin_bp
-from server.routes.blog_routes import blog_bp
+from config import Config
+from extensions import jwt, bcrypt, mongo, cors
+from routes.auth_routes import auth_bp
+from routes.admin_routes import admin_bp
+from routes.blog_routes import blog_bp
 from flask_cors import CORS
 
 def create_app():
@@ -33,3 +33,7 @@ def create_app():
         return jsonify({'status': 'healthy'}), 200
 
     return app
+
+if __name__ == '__main__':
+    app = create_app()
+    app.run(debug=True)
