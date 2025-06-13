@@ -4,9 +4,11 @@ from server.extensions import jwt, bcrypt, mongo, cors
 from server.routes.auth_routes import auth_bp
 from server.routes.admin_routes import admin_bp
 from server.routes.blog_routes import blog_bp
+from flask_cors import CORS
 
 def create_app():
     app = Flask(__name__)
+    CORS(app, origins="*")  # You can restrict this to your frontend URL later
     app.config.from_object(Config)
 
     # Initialize extensions
