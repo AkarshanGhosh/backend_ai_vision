@@ -3,8 +3,8 @@ from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identi
 from datetime import datetime
 from bson.objectid import ObjectId
 
-from server.extensions import mongo
-from server.models.user import User
+from extensions import mongo
+from models.user import User
 
 auth_bp = Blueprint('auth', __name__)
 

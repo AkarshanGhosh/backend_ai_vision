@@ -3,9 +3,9 @@ from flask_jwt_extended import jwt_required
 from bson.objectid import ObjectId
 from datetime import datetime
 
-from server.extensions import mongo, bcrypt
-from server.models.user import User
-from server.utils.decorators import admin_required
+from extensions import mongo, bcrypt
+from models.user import User
+from utils.decorators import admin_required
 
 admin_bp = Blueprint('admin', __name__)
 

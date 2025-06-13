@@ -2,7 +2,7 @@ from functools import wraps
 from flask_jwt_extended import get_jwt_identity
 from flask import jsonify
 from bson.objectid import ObjectId  # ✅ Required for correct MongoDB ID matching
-from server.database import Database
+from database import Database
 
 def admin_required(f):
     @wraps(f)

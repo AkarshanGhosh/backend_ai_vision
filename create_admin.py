@@ -1,6 +1,6 @@
-from server.app import create_app
-from server.models.user import User
-from server.extensions import mongo
+from app import create_app
+from models.user import User
+from extensions import mongo
 
 def create_admin():
     app = create_app()

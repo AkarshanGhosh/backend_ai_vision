@@ -1,4 +1,4 @@
-from server.extensions import mongo
+from extensions import mongo
 
 class Database:
     @staticmethod

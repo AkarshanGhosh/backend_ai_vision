@@ -3,9 +3,9 @@ from flask_jwt_extended import jwt_required, get_jwt_identity
 from bson.objectid import ObjectId
 from datetime import datetime
 
-from server.extensions import mongo
-from server.utils.decorators import admin_required
-from server.models.blog import Blog
+from extensions import mongo
+from utils.decorators import admin_required
+from models.blog import Blog
 
 blog_bp = Blueprint('blog', __name__)
 

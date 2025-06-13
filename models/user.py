@@ -1,5 +1,5 @@
 from datetime import datetime
-from server.extensions import bcrypt
+from extensions import bcrypt
 
 class User:
     def __init__(self, username, email, password, is_admin=False):
